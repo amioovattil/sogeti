@@ -23,4 +23,4 @@ I have experience in setting up the sources under Azure Devops and run the test 
 
 In this particlar case I have created a .TRX file using the command 'vstest.console.exe SogetiTests.dll /logger:trx'.
 Thereafter I have used a small utility (TrxToHtml.exe) to generate a html report and the html file is attached in this email.
-The output report html file can be found under the location root\HtmlReport.
+The html based report file can be found under root\Html report.
