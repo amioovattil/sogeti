@@ -14,7 +14,7 @@ Running the test cases using Microsoft Visual Studio 2019
 Play the already recorded video
 --------------------------------
 As a alternative plan I have created a video of the entire test run in my local machine using the tool OBStudio.
-I have uploaded the video file in the GitHub under the Video directory.
+I have uploaded the video file in the OneDrive (due to size restriction in GitHub) and the link will be provided in the email.
 This video could be used to have a quick look at the running process.
 
 Test report
@@ -23,3 +23,4 @@ I have experience in setting up the sources under Azure Devops and run the test 
 
 In this particlar case I have created a .TRX file using the command 'vstest.console.exe SogetiTests.dll /logger:trx'.
 Thereafter I have used a small utility (TrxToHtml.exe) to generate a html report and the html file is attached in this email.
+The output report html file can be found under the location root\HtmlReport.
