@@ -53,7 +53,7 @@ namespace SogetiTests.ApiTestCase1
             Assert.AreEqual(response.ContentType, "application/json", "Expected context type is JSON");
 
             // Ensure the service invocation does not exceed 1 second.
-            Assert.IsTrue(timeTakenInMilliseconds < 2000, "Time taken to fetch API data exceeds one second. Time taken in millisec : " + timeTakenInMilliseconds);
+            Assert.IsTrue(timeTakenInMilliseconds < 1000, "Time taken to fetch API data exceeds one second. Time taken in millisec : " + timeTakenInMilliseconds);
 
             // Deserialize the JOSN text to Country class.
             var country = JsonConvert.DeserializeObject<Country>(response.Content);
