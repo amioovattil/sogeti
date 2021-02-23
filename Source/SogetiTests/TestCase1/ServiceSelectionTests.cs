@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 
 namespace SogetiTests.TestCase1
 {
@@ -68,10 +69,12 @@ namespace SogetiTests.TestCase1
             IWebElement automationHeader = LocatorHelper.FindServicePageControl(webDriver, ServicePageLocatorName.AutomationHeaderText);
             Assert.AreEqual(automationHeader.Text, "Automation", "Missing the header text 'Automation'");
 
-            // Ensure Services and Automation links are selected
+            // Hover to the Service menu item
+            Actions hoverAction = new Actions(webDriver);
             serviceMainMenu = LocatorHelper.FindServicePageControl(webDriver, ServicePageLocatorName.ServiceMainMenu);
-            serviceMainMenu.Click();
+            hoverAction.MoveToElement(serviceMainMenu).Perform();
 
+            // Ensure Services and Automation links are selected
             string classAttributValue = serviceMainMenu.GetAttribute("class");
             if (!classAttributValue.Contains("selected has-children  expanded level2 hover"))
                 Assert.Fail("Service menu not selected and expanded");
